@@ -1,0 +1,8 @@
+<div class="w-full rounded-lg flex flex-row items-center justify-center gap-16 mt-4">
+    @for (item of nav_link ; track item.id){
+        <button class="rounded-md">
+            <p class="font-sans text-purple-500 font-bold text-xl">{{item.name}}</p>
+        </button>
+    }
+    
+</div>

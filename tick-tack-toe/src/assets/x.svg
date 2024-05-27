@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 182.018 188.812" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient gradientTransform="matrix(-87.379 85.7265 -85.7265 -87.379 146.114 34.1254)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#3c8980"/>
+<stop offset="1" stop-color="#37ffce"/>
+</linearGradient>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="89.3509" id="Filter" width="89.482" x="43.3688" y="56.3836">
+<feDropShadow dx="-3.67321e-05" dy="10" flood-color="#000000" flood-opacity="0.333" in="SourceGraphic" result="Shadow" stdDeviation="5"/>
+</filter>
+</defs>
+<g id="Layer" vectornator:layerName="Layer">
+<path d="M115.285 60.0445C114.387 59.1285 112.908 59.1005 111.992 59.9984L88.1773 83.3364L64.7726 59.5872C63.8722 58.6736 62.3939 58.6407 61.4803 59.541L56.9842 63.9719C56.0707 64.8723 56.082 66.3509 56.9823 67.2645L80.3651 90.9914L56.5724 114.307C55.6564 115.205 55.6284 116.684 56.5263 117.6L60.9349 122.118C61.8328 123.034 63.3114 123.017 64.2274 122.12L88.0424 98.7816L111.447 122.531C112.347 123.444 113.826 123.477 114.739 122.577L119.235 118.146C120.149 117.246 120.138 115.767 119.237 114.854L95.8546 91.1266L119.647 67.8106C120.563 66.9127 120.591 65.4344 119.693 64.5184L115.285 60.0445Z" fill="url(#LinearGradient)" fill-rule="nonzero" filter="url(#Filter)" stroke="none" vectornator:layerName="Curve 1" vectornator:shadowAngle="1.5708" vectornator:shadowColor="#000000" vectornator:shadowOffset="10" vectornator:shadowOpacity="0.333" vectornator:shadowRadius="10"/>
+</g>
+</svg>
