@@ -1,18 +1,18 @@
 
 <div class="w-screen h-screen flex items-center justify-center">
-    <div class="w-[600px] h-[600px] bg-slate-200 rounded-lg shadow-md p-2">
-        <div class="grid grid-cols-3 gap-2 w-full h-full text-center">
-            <div class="bg-purple-500 rounded-lg">1</div>
-            <div class="bg-purple-500 rounded-lg">1</div>
-            <div class="bg-purple-500 rounded-lg">1</div>
-            <div class="bg-purple-500 rounded-lg">1</div>
-            <div class="bg-purple-500 rounded-lg">1</div>
-            <div class="bg-purple-500 rounded-lg">1</div>
-            <div class="bg-purple-500 rounded-lg">1</div>
-            <div class="bg-purple-500 rounded-lg">1</div>
-            <div class="bg-purple-500 rounded-lg">1</div>
+    <div class="bg-slate-200 rounded-lg shadow-md p-2">
+        
 
+        
+        <div class="grid grid-cols-3 gap-4">
+            @for (grid of gameGrid;track grid.id){
+            <div (click)="onMouseClick(grid.id)" class={{grid.class}}>
+                <img src={{grid.icon_link}} alt=""/>
+            </div>
+        }
         </div>
+        
+            
     </div>
 </div>
 
