@@ -18,6 +18,7 @@ export class TickTackToeComponent {
   constructor(private cdr:ChangeDetectorRef){}
   turn = 0;
   gameStatus:GameStatus = GameStatus.Progressing;
+  totalMove = 0;
 
   gameGrid = [
     {
@@ -99,22 +100,27 @@ checkWin() {
   }
   return null;
 }
+
+
 checkGameStatus() {
   const winner = this.checkWin();
+  
   if (winner) {
       this.showWinner(winner);
+  } else if (this.totalMove == 9){
+    this.showWinner("d")
   }
 }
-
- 
 
   showWinner(player: String){
     this.gameStatus = GameStatus.Finished;
     setTimeout(() => {
         if (player == "x"){
             alert("The Winner is Player 2");
-        } else {
+        } else if (player == "o") {
             alert("The Winner is Player 1");
+        }else{
+          alert("It is a Draw");
         }
     }, 100);
 }
@@ -129,6 +135,7 @@ checkGameStatus() {
             element.icon_link = "assets/oNeo.svg";
             element.item = "o";
             this.turn = 1;
+            this.totalMove += 1;
           }
         
         } else {
@@ -136,6 +143,7 @@ checkGameStatus() {
             element.icon_link = "assets/xNeo.svg";
             element.item = "x";
             this.turn = 0;
+            this.totalMove += 1;
           }
           
           
