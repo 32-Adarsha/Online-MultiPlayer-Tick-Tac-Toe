@@ -1,10 +1,13 @@
 <div class="w-full h-full flex flex-col p-1 justify-between">
-
-      <div class="w-full h-[80%] overflow-scroll">
-        @for (message of messageList ; track message ){
-            <div>{{message}}</div>
-        }
+    <div class="pt-5">
+    <div *ngFor="let message of messageList ; let i = index">
+        <div *ngIf="i > 0" [ngClass]="{'justify-end':message.user === userId , 'justify-start':message.user !== userId}" 
+             class="my-1 w-full rounded-2xl h-[50px] flex items-center p-5">
+          <span [ngClass]="{'bg-blue-200': message.user !== userId, 'bg-lime-200': message.user === userId }"
+          class="p-3 rounded-lg">{{ message.user }}: {{ message.message }}</span> 
+        </div>
       </div>
+    </div>
       <div class="w-full flex bottom-5">
         <input class="w-10/12 h-[40px] rounded-sm pl-5 font-medium"
         [(ngModel)]="newMessage"

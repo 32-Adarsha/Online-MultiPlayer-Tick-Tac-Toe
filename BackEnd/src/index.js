@@ -10,7 +10,7 @@ io.on('connection', (socket) => {
   console.log('a user connected');
 
   socket.on('message', (message) => {
-    io.emit('message', `${socket.id.substr(0, 2)}: ${message}`);
+    io.emit('message', message);
   });
 
   socket.on('disconnect', () => {

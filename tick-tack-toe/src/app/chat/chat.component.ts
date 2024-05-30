@@ -14,18 +14,20 @@ import { FormsModule } from '@angular/forms';
 })
 export class ChatComponent {
   newMessage = '';
-  messageList: string[] = [];
-
-  constructor(private chatService: ChatService){}
+  messageList: {user:number , message:string}[] = [];
+  userId:number = 0;
+  constructor(private chatService: ChatService){
+    this.userId = Math.floor(Math.random()*10 + 1)
+  }
 
   ngOnInit(){
-    this.chatService.getNewMessage().subscribe((message: string) => {
+    this.chatService.getNewMessage().subscribe((message: any) => {
       this.messageList.push(message);
     })
   }
 
   sendMessage() {
-    this.chatService.sendMessage(this.newMessage);
+    this.chatService.sendMessage({user:this.userId , message:this.newMessage});
     this.newMessage = '';
   }
 
