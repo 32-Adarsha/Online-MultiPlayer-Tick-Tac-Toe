@@ -24,6 +24,12 @@ export class ChatComponent {
     this.chatService.getNewMessage().subscribe((message: any) => {
       this.messageList.push(message);
     })
+
+    this.chatService.joinGame().subscribe((message: any) => {
+      console.log(message);
+    })
+
+    
   }
 
   sendMessage() {
@@ -31,6 +37,10 @@ export class ChatComponent {
     this.newMessage = '';
   }
 
+ 
+  test(){
+    this.chatService.toTest();
+  }
 
   
 }

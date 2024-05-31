@@ -9,6 +9,7 @@ import { io } from "socket.io-client";
 export class ChatService {
 
   public message$: BehaviorSubject<string> = new BehaviorSubject('');
+  public messagee$: BehaviorSubject<any> = new BehaviorSubject('');
   constructor() {}
 
   socket = io('http://localhost:3000');
@@ -25,4 +26,17 @@ export class ChatService {
 
     return this.message$.asObservable();
   };
+
+  public joinGame = () => {
+    this.socket.on('joinedLobby' , (message) => {
+      this.messagee$.next(message);
+    });
+
+    return this.messagee$.asObservable();
+  }
+
+
+  public toTest = () => {
+    this.socket.emit('playOnline' , "")
+  }
 }
