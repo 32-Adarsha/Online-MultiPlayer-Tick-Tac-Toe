@@ -1,0 +1,16 @@
+<div class="w-screen h-screen flex items-center justify-center">
+    <div class="bg-slate-200 rounded-lg shadow-md p-2">
+        
+
+        
+        <div class="grid grid-cols-3 gap-4">
+            @for (grid of gameInfo.gameData;track grid.id){
+            <div (click)="onMouseClick(grid.id)" class={{grid.class}}>
+                <img src={{grid.icon_link}} alt=""/>
+            </div>
+        }
+        </div>
+        
+            
+    </div>
+</div>

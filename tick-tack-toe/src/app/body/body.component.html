@@ -1,11 +1,26 @@
 <div class="w-full h-full flex items-center justify-center">
-<div class="w-full h-full flex items-center justify-center">
-    <div class="w-[350px] h-[400px] flex flex-col items-center justify-between bg-purple-300 rounded-lg px-2 py-20">
-        <h1 class="font-sans text-white font-bold text-3xl">Tick Tack Toe</h1>
-        <div class="w-full flex flex-col items-center justify-center gap-2">
-            <a [routerLink]="'/games'"><button class="p-1 w-[200px] h-[50px] font-bold bg-white rounded-lg text-purple-500 text-xl">Play Online</button></a>
-            <button class="p-1 w-[200px] h-[50px] font-bold bg-white rounded-lg text-pink-500 text-xl">Play Offline</button>
+    <div class="w-full h-full flex items-center justify-center">
+        <div
+            class="w-[350px] h-[400px] flex flex-col items-center justify-between bg-purple-300 rounded-lg px-2 py-20"
+        >
+            <h1 class="font-sans text-white font-bold text-3xl">
+                Tick Tack Toe
+            </h1>
+            <div class="w-full flex flex-col items-center justify-center gap-2">
+                <a [routerLink]="'/games'"
+                    ><button
+                        class="p-1 w-[200px] h-[50px] font-bold bg-white rounded-lg text-purple-500 text-xl"
+                    >
+                        Play Offline
+                    </button></a
+                >
+                <button
+                    class="p-1 w-[200px] h-[50px] font-bold bg-white rounded-lg text-pink-500 text-xl"
+                    (click)="plOnline()"
+                >
+                    Play Online
+                </button>
+            </div>
         </div>
     </div>
-</div>
 </div>
